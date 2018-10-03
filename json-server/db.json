@@ -1,0 +1,9 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "email": "admin@ad.com",
+            "password": "test"
+        }
+    ]
+}
