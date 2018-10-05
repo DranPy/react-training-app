@@ -1,6 +1,11 @@
-import { CREATE_ACCOUNT } from '../actions';
+import { CREATE_ACCOUNT } from './actionsType';
 
-export default function reducer(state = {}, action) {
+const initialState = {
+    email: '',
+    password: '',
+}
+
+export default function reducer(state = initialState, action) {
     switch (action.type) {
         case CREATE_ACCOUNT:
             return {
