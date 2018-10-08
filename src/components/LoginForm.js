@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes  from 'prop-types';
 import { Field, reduxForm } from 'redux-form'
 
-class RegistrationForm extends Component {
+class LoginForm extends Component {
   static propTypes = {
     handleSubmit: PropTypes.func,
   }
@@ -26,15 +26,9 @@ class RegistrationForm extends Component {
             <div className="col-8">
               <Field className="form-control" name="password" component="input" type="password" />
             </div>
-            <div className="col-4 col-form-label">
-              <label className="form-control-plaintext">Confirm password</label>
-            </div>
-            <div className="col-8">
-              <Field className="form-control" name="confirmPassword" component="input" type="password" />
-            </div>
           </div>
           <div>
-            <input type="submit" className="btn btn-sm" value="Register" />
+            <input type="submit" className="btn btn-sm" value="Login" />
           </div>
         </form>
       </div>
@@ -43,6 +37,6 @@ class RegistrationForm extends Component {
 }
 
 export default reduxForm({
-  form: 'registrationForm',
-  onSubmit: (values, dispatch, props) => props.onRegister(values)
-})(RegistrationForm);
+  form: 'loginForm',
+  onSubmit: (values, dispatch, props) => props.onLogin(values)
+})(LoginForm);
