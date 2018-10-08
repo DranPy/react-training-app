@@ -1,17 +1,17 @@
 import { LOGIN_ACCOUNT } from './actionsType';
 
 const initialState = {
-    isLogin: false
-}
+  isLogin: false,
+};
 
 export default function reducer(state = initialState, action) {
-    switch (action.type) {
-        case LOGIN_ACCOUNT:
-          let isLogin = false;
-          // if ...
-          return { isLogin }
+  switch (action.type) {
+    case LOGIN_ACCOUNT:
+      let isLogin = false;
+      // if ...
+      return { isLogin };
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 }

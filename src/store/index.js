@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore } from 'redux';
 
 import rootReducer from './rootReducer';
 import middleware from './middleware';

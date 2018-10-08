@@ -3,15 +3,17 @@ import { connect } from 'react-redux';
 import { loginAccount } from '../store/login/actions';
 import LoginForm from '../components/LoginForm';
 
-
 function mapStateToProps(state) {
-    return {};
+  return {};
 }
 
 const mapDispatchToProps = {
-    onLogin: loginAccount
-}
+  onLogin: loginAccount,
+};
 
-const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+const LoginContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginForm);
 
 export default LoginContainer;

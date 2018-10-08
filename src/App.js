@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import MainManu from  './components/MainManu';
+import MainManu from './components/MainManu';
 import RegistrationContainer from './containers/RegistrationContainer';
 import LoginContainer from './containers/LoginContainer';
-
 
 class App extends Component {
   render() {
@@ -15,7 +14,7 @@ class App extends Component {
           <MainManu />
         </header>
         <main>
-          <RegistrationContainer />  
+          <RegistrationContainer />
         </main>
       </div>
     );

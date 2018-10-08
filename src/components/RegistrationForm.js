@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes  from 'prop-types';
-import { Field, reduxForm } from 'redux-form'
+import PropTypes from 'prop-types';
+import { Field, reduxForm } from 'redux-form';
 
 class RegistrationForm extends Component {
   static propTypes = {
     handleSubmit: PropTypes.func,
-  }
+  };
 
   render() {
     const { handleSubmit } = this.props;
@@ -30,7 +30,12 @@ class RegistrationForm extends Component {
               <label className="form-control-plaintext">Confirm password</label>
             </div>
             <div className="col-8">
-              <Field className="form-control" name="confirmPassword" component="input" type="password" />
+              <Field
+                className="form-control"
+                name="confirmPassword"
+                component="input"
+                type="password"
+              />
             </div>
           </div>
           <div>
@@ -44,5 +49,5 @@ class RegistrationForm extends Component {
 
 export default reduxForm({
   form: 'registrationForm',
-  onSubmit: (values, dispatch, props) => props.onRegister(values)
+  onSubmit: (values, dispatch, props) => props.onRegister(values),
 })(RegistrationForm);
