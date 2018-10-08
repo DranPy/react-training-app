@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import MainMenu from './components/MainMenu';
+import RegistrationContainer from './containers/RegistrationContainer';
+import LoginContainer from './containers/LoginContainer';
 
 class App extends Component {
   render() {
