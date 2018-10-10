@@ -1,19 +1,9 @@
-import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
 
 import { loginAccount } from '../store/login/actions';
 import LoginForm from '../components/LoginForm';
 
-function mapStateToProps(state) {
-  return {};
-}
-
-const mapDispatchToProps = {
-  onLogin: loginAccount,
-};
-
-const LoginContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LoginForm);
-
-export default LoginContainer;
+export default reduxForm({
+  form: 'loginForm',
+  onSubmit: (values, dispatch) => dispatch(loginAccount(values)),
+})(LoginForm);

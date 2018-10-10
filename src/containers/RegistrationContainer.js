@@ -1,19 +1,10 @@
 import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
 
 import { createAccount } from '../store/registration/actions';
 import RegistrationForm from '../components/RegistrationForm';
 
-function mapStateToProps(state) {
-  return {};
-}
-
-const mapDispatchToProps = {
-  onRegister: createAccount,
-};
-
-const RegistrationContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RegistrationForm);
-
-export default RegistrationContainer;
+export default reduxForm({
+  form: 'registrationForm',
+  onSubmit: (values, dispatch) => dispatch(createAccount(values)),
+})(RegistrationForm);

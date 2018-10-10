@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Field, reduxForm } from 'redux-form';
+import { Field } from 'redux-form';
 
 class LoginForm extends Component {
   static propTypes = {
@@ -36,7 +36,4 @@ class LoginForm extends Component {
   }
 }
 
-export default reduxForm({
-  form: 'loginForm',
-  onSubmit: (values, dispatch, props) => props.onLogin(values),
-})(LoginForm);
+export default LoginForm;
