@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> should match snapshot 1`] = `
+<div
+  className="container"
+>
+  <form>
+    <div
+      className="form-group row"
+    >
+      <div
+        className="col-4 col-form-label"
+      >
+        <label
+          className="form-control-plaintext"
+        >
+          Email
+        </label>
+      </div>
+      <div
+        className="col-8"
+      >
+        <Field
+          className="form-control"
+          component="input"
+          name="email"
+          type="email"
+        />
+      </div>
+      <div
+        className="col-4 col-form-label"
+      >
+        <label
+          className="form-control-plaintext"
+        >
+          Password
+        </label>
+      </div>
+      <div
+        className="col-8"
+      >
+        <Field
+          className="form-control"
+          component="input"
+          name="password"
+          type="password"
+        />
+      </div>
+    </div>
+    <div>
+      <input
+        className="btn btn-sm"
+        type="submit"
+        value="Login"
+      />
+    </div>
+  </form>
+</div>
+`;
