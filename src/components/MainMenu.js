@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 class MainMenu extends Component {
   render() {
     return (
       <div className="main-menu">
         <ul className="nav">
           <li className="nav-item">
-            <a className="nav-link active" href="">
+            <NavLink className="nav-link active" to="/login">
               Login
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <NavLink className="nav-link" to="/register">
               Register
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
