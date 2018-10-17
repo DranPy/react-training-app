@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import ProductItem from './ProductItem';
+import Loader from '../Loader';
 
 import './ProductsList.css';
 
@@ -24,9 +25,11 @@ class ProductsList extends Component {
         <div className="container">
           <h1>Products</h1>
           <ul className="list-unstyled">
-            {!isLoading && products.length
-              ? products.map(product => <ProductItem key={product.id} product={product} />)
-              : 'loading...'}
+            {!isLoading && products ? (
+              products.map(product => <ProductItem key={product.id} product={product} />)
+            ) : (
+              <Loader />
+            )}
           </ul>
         </div>
       </div>

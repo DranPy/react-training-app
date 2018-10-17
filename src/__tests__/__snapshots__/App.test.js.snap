@@ -1,16 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
+<BrowserRouter>
+  <div
+    className="App"
   >
-    <MainMenu />
-  </header>
-  <main>
-    <ReduxForm />
-  </main>
-</div>
+    <header
+      className="App-header"
+    >
+      <MainMenu />
+    </header>
+    <main>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/register"
+        />
+        <Route
+          component={[Function]}
+          path="/login"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/products"
+        />
+        <Route
+          component={[Function]}
+          path="/products/:id"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </main>
+  </div>
+</BrowserRouter>
 `;

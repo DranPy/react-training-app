@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Loader from '../Loader';
+
 class ProductDetails extends Component {
   static propTypes = {
     isLoading: PropTypes.bool,
-    // product: PropTypes.shape({
-    //   id: PropTypes.number.isRequired,
-    //   name: PropTypes.string.isRequired,
-    //   category: PropTypes.string,
-    //   price: PropTypes.string,
-    //   imgUrl: PropTypes.string,
-    // }),
-    product: PropTypes.object,
+    product: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      category: PropTypes.string,
+      price: PropTypes.string,
+      imgUrl: PropTypes.string,
+    }),
     fetchProduct: PropTypes.func.isRequired,
   };
 
@@ -21,16 +22,23 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { name, category, price, imgUrl } = this.props.product;
+    const { isLoading, product } = this.props;
+    const { name, category, price, imgUrl } = product;
 
     return (
       <div className="product-details">
         <div className="container">
-          <h1>{name}</h1>
-          <div>
-            <img src={imgUrl} className="img-fluid" alt={name} />
-          </div>
-          <div>{price}</div>
+          {!isLoading && product ? (
+            <div>
+              <h1>{name}</h1>
+              <div>
+                <img src={imgUrl} className="img-fluid" alt={name} />
+              </div>
+              <div>{price}</div>
+            </div>
+          ) : (
+            <Loader />
+          )}
         </div>
       </div>
     );

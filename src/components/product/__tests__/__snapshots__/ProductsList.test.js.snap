@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductsList /> should not render component 1`] = `
+<div
+  className="products-list"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Products
+    </h1>
+    <ul
+      className="list-unstyled"
+    >
+      <Loader />
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ProductsList /> should render component 1`] = `
+<div
+  className="products-list"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Products
+    </h1>
+    <ul
+      className="list-unstyled"
+    >
+      <ProductItem
+        key="1"
+        product={
+          Object {
+            "category": "category 1",
+            "id": "1",
+            "imgUrl": "src/1.jpg",
+            "name": "test1",
+            "price": "1$",
+          }
+        }
+      />
+    </ul>
+  </div>
+</div>
+`;

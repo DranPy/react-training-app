@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 class ProductItem extends Component {
+  static propTypes = {
+    product: PropTypes.object,
+  };
+
   render() {
     const { id, name, price, imgUrl } = this.props.product;
     const currency = this.props.currency || '$';

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductDetails /> should not render product details 1`] = `
+<div
+  className="product-details"
+>
+  <div
+    className="container"
+  >
+    <Loader />
+  </div>
+</div>
+`;
+
+exports[`<ProductDetails /> should render product details 1`] = `
+<div
+  className="product-details"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <h1>
+        test name 1
+      </h1>
+      <div>
+        <img
+          alt="test name 1"
+          className="img-fluid"
+          src="src/1.img"
+        />
+      </div>
+      <div>
+        1$
+      </div>
+    </div>
+  </div>
+</div>
+`;

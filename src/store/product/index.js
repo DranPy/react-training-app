@@ -6,7 +6,6 @@ import {
 } from './actionsType';
 
 import { keyBy, castArray } from 'lodash';
-import { debug } from 'util';
 
 const initialState = {
   isLoading: false,
