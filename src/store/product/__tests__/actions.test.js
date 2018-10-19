@@ -17,10 +17,6 @@ import apiHelper from '../../../utils/apiHelper';
 
 jest.mock('../../../utils/apiHelper');
 
-// beforeEach(() => {
-//   apiHelper.mockClear();
-// });
-
 describe('product/actions', () => {
   it('fetchManyProductsRequest', () => {
     const value = fetchManyProductsRequest();

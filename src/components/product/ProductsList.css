@@ -1,13 +1,21 @@
 .products-list ul {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 
+.products-list h1 {
+  position: relative;
+  padding-right: 40px;
+}
+
+.products-list  h1 .products-list__btn-add {
+ position: absolute;
+ right: 0;
+ top: 5px; 
+}
+
+
 .product-item  {
-  margin-right: 10px;
-  margin-left: 10px;
   margin-bottom: 10px;
 }
 

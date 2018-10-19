@@ -1,0 +1,22 @@
+.breadcrumbs ul {
+  display: flex;
+}
+
+.breadcrumbs ul li .svg-inline--fa {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.product-details h1 {
+  margin-bottom: 0;
+}
+
+.product-details .product-details__author {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-details .product-details__price {
+  font-size: 20px;
+}

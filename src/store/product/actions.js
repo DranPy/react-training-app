@@ -22,7 +22,7 @@ export const fetchManyProducts = () => async dispatch => {
     const response = await api.getAllProducts();
     dispatch(fetchManyProductsSuccess(response));
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -42,6 +42,6 @@ export const fetchProduct = id => async dispatch => {
     const response = await api.getProduct(id);
     dispatch(fetchProductSuccess([response]));
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };

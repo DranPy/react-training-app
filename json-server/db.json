@@ -9,24 +9,66 @@
     "products": [
         {
             "id": 0,
-            "name": "book 1",
-            "category": "category 1",
+            "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+            "author": "Robert Martin",
+            "description": "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. Noted software expert Robert C. Martin presents a revolutionary paradigm with 'Clean Code: A Handbook of Agile Software Craftsmanship.' Martin has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code 'on the fly' into a book that will instill within you the values of a software craftsman and make you a better programmer--but only if you work at it.  What kind of work will you be doing? You'll be reading code--lots of code. And you will be challenged to think about what's right about that code, and what's wrong with it. More importantly, you will be challenged to reassess your professional values and your commitment to your craft. 'Clean Code' is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code--of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and 'smells' gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code. Readers will come away from this book understanding. How to tell the difference between good and bad codeHow to write good code and how to transform bad code into good codeHow to create good names, good functions, good objects, and good classesHow to format code for maximum readabilityHow to implement complete error handling without obscuring code logicHow to unit test and practice test-driven developmentThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code. ",
+            "category": "Programming",
             "price": 25,
-            "imgUrl": "https://www.placecage.com/c/200/200"
+            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/51d1qVhmAmL._SX373_BO1,204,203,200_.jpg"
         },
         {
             "id": 1,
-            "name": "book 2",
-            "category": "category 2",
+            "name": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+            "author": "Robert Martin",
+            "description": "By applying universal rules of software architecture, you can dramatically improve developer productivity throughout the life of any software system. Now, building upon the success of his best-selling books Clean Code and The Clean Coder, legendary software craftsman Robert C. Martin (“Uncle Bob”) reveals those rules and helps you apply them.",
+            "category": "Programming",
             "price": 35,
-            "imgUrl": "https://www.placecage.com/c/200/200"
+            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/41BjtnvIUQL._SX382_BO1,204,203,200_.jpg"
         },
         {
             "id": 2,
-            "name": "book 3",
-            "category": "category 3",
+            "name": "Grokking Algorithms: An illustrated guide for programmers and other curious people",
+            "author": "Aditya Bhargava",
+            "description": "This book is an extraordinary and easy to digest guide to the most used algorithms in computer science. Is so easy to read that even non programmers can understand how this algorithms work.",
+            "category": "Computer Science",
             "price": 45,
-            "imgUrl": "https://www.placecage.com/c/200/200"
+            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Head First Design Patterns: A Brain-Friendly Guide ",
+            "author": "Eric Freeman",
+            "description": "At any given moment, someone struggles with the same software design problems you have. And, chances are, someone else has already solved your problem. This edition of Head First Design Patterns—now updated for Java 8—shows you the tried-and-true, road-tested patterns used by developers to create functional, elegant, reusable, and flexible software. By the time you finish this book, you’ll be able to take advantage of the best design practices and experiences of those who have fought the beast of software design and triumphed.",
+            "category": "Programming",
+            "price": 45,
+            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61ZG-hATOeL._SX430_BO1,204,203,200_.jpg"
+        }
+    ],
+    "authors": [
+        {
+            "id": 0,
+            "firstName": "Robert",
+            "lastName": "Martin"
+        },
+        {
+            "id": 1,
+            "firstName": "Aditya",
+            "lastName": "Bhargava"
+        },
+        {
+            "id": 1,
+            "firstName": "Eric",
+            "lastName": "Freeman"
+        }
+    ],
+    "categories": [
+        {
+            "id": 0,
+            "name": "Computer Science"
+        },
+        {
+            "id": 1,
+            "name": "Programming"
         }
     ]
 }
