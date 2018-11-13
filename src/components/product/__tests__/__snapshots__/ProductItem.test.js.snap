@@ -2,107 +2,41 @@
 
 exports[`<ProductItem /> should match snapshot 1`] = `
 <li
-  className="product-item"
+  className="col-3"
 >
-  <Link
-    replace={false}
-    to="/products/1"
-  >
-    <img
-      alt="test name 1"
-      className="product-item__img img-fluid rounded"
-      src="src/1.img"
-    />
-  </Link>
-  <div>
-    <h5
-      className="product-item__name"
-    >
-      <Link
-        replace={false}
-        to="/products/1"
-      >
-        test name 1
-      </Link>
-    </h5>
-    <div
-      className="product-item__price"
-    >
-      1$$
-    </div>
-  </div>
   <div
-    className="product-item__actions btn-group"
+    className="product-item"
   >
-    <button
-      className="btn btn-primary"
-      title="Buy"
+    <Link
+      replace={false}
+      to="/products/1"
     >
-      <FontAwesomeIcon
-        border={false}
-        className=""
-        fixedWidth={false}
-        flip={null}
-        icon="shopping-cart"
-        inverse={false}
-        listItem={false}
-        mask={null}
-        pull={null}
-        pulse={false}
-        rotation={null}
-        size={null}
-        spin={false}
-        symbol={false}
-        title=""
-        transform={null}
+      <img
+        alt="test name 1"
+        className="product-item__img img-fluid rounded"
+        src="src/1.img"
       />
-    </button>
-    <button
-      className="btn btn-outline-primary"
-      title="Remove"
-    >
-      <FontAwesomeIcon
-        border={false}
-        className=""
-        fixedWidth={false}
-        flip={null}
-        icon="times-circle"
-        inverse={false}
-        listItem={false}
-        mask={null}
-        pull={null}
-        pulse={false}
-        rotation={null}
-        size={null}
-        spin={false}
-        symbol={false}
-        title=""
-        transform={null}
-      />
-    </button>
-    <button
-      className="btn btn-outline-primary"
-      title="Edit"
-    >
-      <FontAwesomeIcon
-        border={false}
-        className=""
-        fixedWidth={false}
-        flip={null}
-        icon="pen"
-        inverse={false}
-        listItem={false}
-        mask={null}
-        pull={null}
-        pulse={false}
-        rotation={null}
-        size={null}
-        spin={false}
-        symbol={false}
-        title=""
-        transform={null}
-      />
-    </button>
+    </Link>
+    <div>
+      <h5
+        className="product-item__name"
+      >
+        <Link
+          replace={false}
+          to="/products/1"
+        >
+          test name 1
+        </Link>
+      </h5>
+      <div
+        className="product-item__price"
+      >
+        <strong>
+          1$$
+        </strong>
+      </div>
+    </div>
+    <ProductActions />
   </div>
 </li>
 `;

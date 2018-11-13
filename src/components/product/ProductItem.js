@@ -7,10 +7,12 @@ import ProductActions from './ProductActions';
 class ProductItem extends Component {
   static propTypes = {
     product: PropTypes.object,
+    onDelete: PropTypes.func,
   };
 
   render() {
-    const { id, name, price, imgUrl } = this.props.product;
+    const { product, onDelete } = this.props;
+    const { id, name, price, imgUrl } = product;
     const currency = this.props.currency || '$';
 
     return (
@@ -27,7 +29,7 @@ class ProductItem extends Component {
               <strong>{price + currency}</strong>
             </div>
           </div>
-          <ProductActions />
+          <ProductActions id={id} onDelete={onDelete} />
         </div>
       </li>
     );

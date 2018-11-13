@@ -1,74 +1,118 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@ad.com",
+      "password": "test"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "authors": [
         {
-            "id": 0,
-            "email": "admin@ad.com",
-            "password": "test"
+          "id": 1,
+          "name": "Robert Martin"
         }
-    ],
-    "products": [
+      ],
+      "categories": [
         {
-            "id": 0,
-            "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
-            "author": "Robert Martin",
-            "description": "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. Noted software expert Robert C. Martin presents a revolutionary paradigm with 'Clean Code: A Handbook of Agile Software Craftsmanship.' Martin has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code 'on the fly' into a book that will instill within you the values of a software craftsman and make you a better programmer--but only if you work at it.  What kind of work will you be doing? You'll be reading code--lots of code. And you will be challenged to think about what's right about that code, and what's wrong with it. More importantly, you will be challenged to reassess your professional values and your commitment to your craft. 'Clean Code' is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code--of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and 'smells' gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code. Readers will come away from this book understanding. How to tell the difference between good and bad codeHow to write good code and how to transform bad code into good codeHow to create good names, good functions, good objects, and good classesHow to format code for maximum readabilityHow to implement complete error handling without obscuring code logicHow to unit test and practice test-driven developmentThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code. ",
-            "category": "Programming",
-            "price": 25,
-            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/51d1qVhmAmL._SX373_BO1,204,203,200_.jpg"
-        },
-        {
-            "id": 1,
-            "name": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
-            "author": "Robert Martin",
-            "description": "By applying universal rules of software architecture, you can dramatically improve developer productivity throughout the life of any software system. Now, building upon the success of his best-selling books Clean Code and The Clean Coder, legendary software craftsman Robert C. Martin (“Uncle Bob”) reveals those rules and helps you apply them.",
-            "category": "Programming",
-            "price": 35,
-            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/41BjtnvIUQL._SX382_BO1,204,203,200_.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Grokking Algorithms: An illustrated guide for programmers and other curious people",
-            "author": "Aditya Bhargava",
-            "description": "This book is an extraordinary and easy to digest guide to the most used algorithms in computer science. Is so easy to read that even non programmers can understand how this algorithms work.",
-            "category": "Computer Science",
-            "price": 45,
-            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Head First Design Patterns: A Brain-Friendly Guide ",
-            "author": "Eric Freeman",
-            "description": "At any given moment, someone struggles with the same software design problems you have. And, chances are, someone else has already solved your problem. This edition of Head First Design Patterns—now updated for Java 8—shows you the tried-and-true, road-tested patterns used by developers to create functional, elegant, reusable, and flexible software. By the time you finish this book, you’ll be able to take advantage of the best design practices and experiences of those who have fought the beast of software design and triumphed.",
-            "category": "Programming",
-            "price": 45,
-            "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61ZG-hATOeL._SX430_BO1,204,203,200_.jpg"
+          "id": 1,
+          "name": "Computer Science"
         }
-    ],
-    "authors": [
+      ],
+      "description": "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. Noted software expert Robert C. Martin presents a revolutionary paradigm with 'Clean Code: A Handbook of Agile Software Craftsmanship.' Martin has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code 'on the fly' into a book that will instill within you the values of a software craftsman and make you a better programmer--but only if you work at it.  What kind of work will you be doing? You'll be reading code--lots of code. And you will be challenged to think about what's right about that code, and what's wrong with it. More importantly, you will be challenged to reassess your professional values and your commitment to your craft. 'Clean Code' is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code--of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and 'smells' gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code. Readers will come away from this book understanding. How to tell the difference between good and bad codeHow to write good code and how to transform bad code into good codeHow to create good names, good functions, good objects, and good classesHow to format code for maximum readabilityHow to implement complete error handling without obscuring code logicHow to unit test and practice test-driven developmentThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code. ",
+      "price": 25,
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/51d1qVhmAmL._SX373_BO1,204,203,200_.jpg"
+    },
+    {
+      "name": "Grokking Algorithms",
+      "description": "This book is an extraordinary and easy to digest guide to the most used algorithms in computer science. Is so easy to read that even non programmers can understand how this algorithms work.",
+      "price": "40",
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg",
+      "authors": [
         {
-            "id": 0,
-            "firstName": "Robert",
-            "lastName": "Martin"
-        },
-        {
-            "id": 1,
-            "firstName": "Aditya",
-            "lastName": "Bhargava"
-        },
-        {
-            "id": 1,
-            "firstName": "Eric",
-            "lastName": "Freeman"
+          "id": 1,
+          "name": "Robert Martin"
         }
-    ],
-    "categories": [
+      ],
+      "categories": [
         {
-            "id": 0,
-            "name": "Computer Science"
+          "id": 1,
+          "name": "Computer Science"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Test Driven Development: By Example",
+      "description": "Test driven development allows you to program your software in incremental steps, defining first the business logic rules trough tests, see them fail and produce the minimal amount of code to see them pass. At a first sight it seems that you are doing more work than you should, but once you adopt it you will see that you do less code, with more quality and you will have confidence to change your code without worrying that everything will fall apart.",
+      "price": "140",
+      "imgUrl": "data:image/webp;base64,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",
+      "authors": [
+        {
+          "id": 1,
+          "name": "Robert Martin"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Computer Science"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Soft Skills: The software developer’s life manual",
+      "description": "This book will help you achieve a fair balance between your technical skills and your soft skills. Soft skills are an important part to achieve success, because to do something awesome you have to interact with other people.",
+      "price": "781",
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/51WiLueukSL._SX396_BO1,204,203,200_.jpg",
+      "authors": [
+        {
+          "id": 2,
+          "name": "Aditya Bhargava"
         },
         {
-            "id": 1,
-            "name": "Programming"
+          "id": 1,
+          "name": "Robert Martin"
         }
-    ]
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Computer Science"
+        }
+      ],
+      "id": 7
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "firstName": "Robert",
+      "lastName": "Martin"
+    },
+    {
+      "id": 2,
+      "firstName": "Aditya",
+      "lastName": "Bhargava"
+    },
+    {
+      "id": 3,
+      "firstName": "Eric",
+      "lastName": "Freeman"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Programming"
+    }
+  ]
 }

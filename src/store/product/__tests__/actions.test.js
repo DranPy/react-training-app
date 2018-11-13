@@ -13,9 +13,9 @@ import {
   fetchProductSuccess,
   fetchProduct,
 } from '../actions';
-import apiHelper from '../../../utils/apiHelper';
+import api from '../../../utils/api-helper';
 
-jest.mock('../../../utils/apiHelper');
+jest.mock('../../../utils/api-helper');
 
 describe('product/actions', () => {
   it('fetchManyProductsRequest', () => {
@@ -33,7 +33,7 @@ describe('product/actions', () => {
     const dispatchHandler = jest.fn();
     const expectPayload = 'products';
 
-    apiHelper.getAllProducts.mockReturnValue(expectPayload);
+    api.getAllProducts.mockReturnValue(expectPayload);
     await fetchManyProducts()(dispatchHandler);
     expect(dispatchHandler).toHaveBeenCalledTimes(2);
     expect(dispatchHandler).toHaveBeenCalledWith(fetchManyProductsRequest());
@@ -55,7 +55,7 @@ describe('product/actions', () => {
     const dispatchHandler = jest.fn();
     const expectPayload = 'product';
 
-    apiHelper.getProduct.mockReturnValue(expectPayload);
+    api.getProduct.mockReturnValue(expectPayload);
     await fetchProduct()(dispatchHandler);
     expect(dispatchHandler).toHaveBeenCalledTimes(2);
     expect(dispatchHandler).toHaveBeenCalledWith(fetchProductRequest());

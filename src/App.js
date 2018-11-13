@@ -9,10 +9,13 @@ import RegistrationContainer from './containers/RegistrationFormContainer';
 import LoginContainer from './containers/LoginFormContainer';
 import ProductsListContainer from './containers/product/ProductsListContainer';
 import ProductDetailsContainer from './containers/product/ProductDetailsContainer';
+
 import NotFound from './components/NotFound';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import ProductAddPage from './pages/ProductAddPage';
+import ProductEditPage from './pages/ProductEditPage';
 
 library.add(fas);
 
@@ -29,6 +32,8 @@ class App extends Component {
               <Route exact path="/register" component={RegistrationContainer} />
               <Route path="/login" component={LoginContainer} />
               <Route exact path="/products" component={ProductsListContainer} />
+              <Route path="/products/add" component={ProductAddPage} />
+              <Route exact path="/products/:id/edit" component={ProductEditPage} />
               <Route path="/products/:id" component={ProductDetailsContainer} />
               <Route component={NotFound} />
             </Switch>

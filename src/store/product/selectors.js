@@ -1,7 +1,29 @@
-import { get, values } from 'lodash';
+import { get, values, map, isEmpty } from 'lodash';
 
-export const getProducts = state => values(state.products.byId);
+const context = 'products';
 
-export const getProduct = (state, id) => get(state, ['products', 'byId', id], {});
+export const getProducts = state => values(state[context].byId);
 
-export const getIsLoading = state => state.products.isLoading;
+export const getProduct = (state, id) => get(state, [context, 'byId', id], {});
+
+export const getProductForForm = (state, id) => {
+  const product = getProduct(state, id);
+
+  if (isEmpty(product)) {
+    return {};
+  }
+
+  return {
+    ...product,
+    authors: map(product.authors, author => ({
+      value: author.id,
+      label: author.name,
+    })),
+    categories: map(product.categories, category => ({
+      value: category.id,
+      label: category.name,
+    })),
+  };
+};
+
+export const getIsLoading = state => state[context].isLoading;

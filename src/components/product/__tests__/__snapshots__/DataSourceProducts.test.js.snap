@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataSourceProducts /> should correct render 1`] = `
+<DataSourceProducts
+  isFetchImmediately={false}
+>
+  <MockComponent
+    fetchProducts={[Function]}
+    isLoading={false}
+    products={Array []}
+  >
+    <div>
+      Component
+    </div>
+  </MockComponent>
+</DataSourceProducts>
+`;

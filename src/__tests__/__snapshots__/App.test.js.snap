@@ -22,9 +22,9 @@ exports[`<App /> 1`] = `
           path="/login"
         />
         <Route
-          component={[Function]}
           exact={true}
           path="/products"
+          render={[Function]}
         />
         <Route
           component={[Function]}

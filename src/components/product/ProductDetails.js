@@ -28,29 +28,32 @@ class ProductDetails extends Component {
 
   render() {
     const { isLoading, product } = this.props;
-    const { name, category, author, description, price, imgUrl } = product;
+    const { id, name, categories, authors, description, price, imgUrl } = product;
 
     return (
       <React.Fragment>
-        <div className="breadcrumbs">
-          <div className="container">
-            <ul className="list-unstyled">
-              <li>
-                <Link to="/products">Books</Link>
-                <FA icon="angle-right" />
-              </li>
-              <li>
-                <span>{category}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div className="product-details">
           <div className="container">
             {!isLoading && product ? (
               <React.Fragment>
+                <div className="breadcrumbs">
+                  <ul className="list-unstyled">
+                    <li>
+                      <Link to="/products">Books</Link>
+                      <FA icon="angle-right" />
+                    </li>
+                    <li>
+                      <span>
+                        {categories && categories.map(category => category.name).join(', ')}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
                 <h1>{name}</h1>
-                <small className="product-details__author">by {author}</small>
+                <small className="product-details__author">
+                  by {authors && authors.map(author => author.name).join(', ')}
+                </small>
                 <div className="row">
                   <div className="col-4">
                     <img src={imgUrl} className="img-fluid" alt={name} />
@@ -64,7 +67,7 @@ class ProductDetails extends Component {
                       </div>
                       <div className="col-sm-4 ml-auto">
                         <input className="form-control" type="number" defaultValue={1} />
-                        <ProductActions />
+                        <ProductActions id={id} />
                       </div>
                     </div>
 
