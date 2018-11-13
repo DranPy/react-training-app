@@ -10,7 +10,7 @@ process.on('unhandledRejection', err => {
 });
 
 // Run json-server
-const jsonServer = require('../config/json-server.config');
+const jsonServer = require('../config/json-server');
 jsonServer.init();
 
 // Ensure environment variables are read.

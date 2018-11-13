@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HOC withProducts should correct render 1`] = `
+<MockComponent
+  fetchProducts={[Function]}
+  isLoading={false}
+  products={Array []}
+/>
+`;
