@@ -2,45 +2,74 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form';
 
+import InputWithLabel from '../../components/forms/fields/InputWithLabel';
+
 class RegistrationForm extends Component {
   static propTypes = {
     handleSubmit: PropTypes.func,
+    valid: PropTypes.bool,
+    submitting: PropTypes.bool,
+    errorMessage: PropTypes.string,
+    isLoading: PropTypes.bool,
+    isAuthorized: PropTypes.bool,
+  };
+
+  errorMessage = () => {
+    const { errorMessage } = this.props;
+    if (errorMessage) {
+      return <div className="alert alert-warning">{errorMessage}</div>;
+    }
+  };
+
+  // TODO: create page and move redirect to page
+  redirectAuthorizedUser = () => {
+    const { history, isAuthorized } = this.props;
+    if (isAuthorized) {
+      if (history.length > 1) {
+        //   history.goBack();
+        // } else {
+        history.push('/');
+      }
+    }
   };
 
   render() {
-    const { handleSubmit } = this.props;
+    this.redirectAuthorizedUser();
+    const { handleSubmit, valid, submitting } = this.props;
 
     return (
-      <div className="container">
+      <div className="container" style={{ width: 600 }}>
         <form onSubmit={handleSubmit}>
-          <div className="form-group row">
-            <div className="col-4 col-form-label">
-              <label className="form-control-plaintext">Email</label>
-            </div>
-            <div className="col-8">
-              <Field className="form-control" name="email" component="input" type="email" />
-            </div>
-            <div className="col-4 col-form-label">
-              <label className="form-control-plaintext">Password</label>
-            </div>
-            <div className="col-8">
-              <Field className="form-control" name="password" component="input" type="password" />
-            </div>
-            <div className="col-4 col-form-label">
-              <label className="form-control-plaintext">Confirm password</label>
-            </div>
-            <div className="col-8">
-              <Field
-                className="form-control"
-                name="confirmPassword"
-                component="input"
-                type="password"
-              />
-            </div>
-          </div>
+          <Field
+            label="Email"
+            className="form-control"
+            name="email"
+            component={InputWithLabel}
+            type="email"
+          />
+          <Field
+            label="Password"
+            className="form-control"
+            name="password"
+            component={InputWithLabel}
+            type="password"
+          />
+          <Field
+            label="Confirm password"
+            className="form-control"
+            name="confirmPassword"
+            component={InputWithLabel}
+            type="password"
+          />
           <div>
-            <input type="submit" className="btn btn-sm" value="Register" />
+            <input
+              type="submit"
+              className="btn btn-block btn-primary"
+              disabled={submitting || !valid}
+              value="Register"
+            />
           </div>
+          {this.errorMessage()}
         </form>
       </div>
     );

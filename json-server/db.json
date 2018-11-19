@@ -3,7 +3,52 @@
     {
       "id": 1,
       "email": "admin@ad.com",
-      "password": "test"
+      "password": "test1"
+    },
+    {
+      "email": "admin1@ad.com",
+      "password": "test1",
+      "id": 2
+    },
+    {
+      "email": "admin3@ad.com",
+      "password": "test1",
+      "id": 3
+    },
+    {
+      "email": "admin4@ad.com",
+      "password": "test1",
+      "id": 4
+    },
+    {
+      "email": "admin7@ad.com",
+      "password": "test1",
+      "id": 5
+    },
+    {
+      "email": "admin9@ad.com",
+      "password": "test1",
+      "id": 6
+    },
+    {
+      "email": "admin11@ad.com",
+      "password": "test1",
+      "id": 7
+    },
+    {
+      "email": "admin123@ad.com",
+      "password": "test1",
+      "id": 8
+    },
+    {
+      "email": "admin321@ad.com",
+      "password": "test1",
+      "id": 9
+    },
+    {
+      "email": "admin1253@ad.com",
+      "password": "test1",
+      "id": 10
     }
   ],
   "products": [

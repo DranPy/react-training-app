@@ -51,12 +51,31 @@ const apiHelper = {
     const response = await api.get(`/authors/${id}`);
     return response.data;
   },
-  login: async user => {
-    const response = await api.post('/login', { data: user });
+  signIn: async user => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    const response = await api.post('/signIn', JSON.stringify(user), config);
     return response;
   },
-  logup: async user => {
-    const response = await api.post('/logup', { data: user });
+  signUp: async user => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    const response = await api.post('/signUp', JSON.stringify(user), config);
+    return response;
+  },
+  checkUserSession: async token => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    const response = await api.post('/session', JSON.stringify({ token }), config);
     return response;
   },
 };

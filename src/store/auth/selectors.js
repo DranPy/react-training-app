@@ -1,17 +1,7 @@
-import { get, values } from 'lodash';
+const context = 'auth';
 
-const context = 'authors';
-
-export const getAuthors = state => values(state[context].byId);
-
-export const getAuthorsForSelect = state => {
-  const authors = values(state[context].byId);
-  return authors.map(author => ({
-    value: author.id,
-    label: `${author.firstName} ${author.lastName}`,
-  }));
-};
-
-export const getAuthor = (state, id) => get(state, [context, 'byId', id], {});
+export const getIsAuthorized = state => state[context].isAuthorized;
 
 export const getIsLoading = state => state[context].isLoading;
+
+export const getErrorMessage = state => state[context].errorMessage;
