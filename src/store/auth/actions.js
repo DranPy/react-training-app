@@ -86,7 +86,6 @@ export const checkUserSession = token => async dispatch => {
   dispatch(checkUserSessionRequest());
 
   try {
-    debugger;
     await api.checkUserSession(token);
     dispatch(checkUserSessionSuccess());
   } catch (error) {

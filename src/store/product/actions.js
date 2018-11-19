@@ -70,7 +70,6 @@ export const updateProductSuccess = product => ({
 
 export const updateProduct = (id, product) => async dispatch => {
   try {
-    console.log(id, product);
     await api.updateProduct(id, product);
     dispatch(updateProductSuccess({ id, product }));
   } catch (error) {

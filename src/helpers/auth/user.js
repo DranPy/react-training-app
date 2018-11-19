@@ -4,6 +4,10 @@ export function getUserToken() {
   return localStorage.getItem(storageKey);
 }
 
+export function removeUserToken() {
+  return localStorage.removeItem(storageKey);
+}
+
 export function setUserToken(token) {
   return localStorage.setItem(storageKey, token);
 }

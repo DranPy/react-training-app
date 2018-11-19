@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './MainMenu.css';
+import StatusBarContainer from '../containers/auth/StatusBarContainer';
 
 class MainMenu extends Component {
   render() {
@@ -14,18 +15,7 @@ class MainMenu extends Component {
             </NavLink>
           </li>
         </ul>
-        <ul className="nav nav--right">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/login">
-              Login
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/register">
-              Register
-            </NavLink>
-          </li>
-        </ul>
+        <StatusBarContainer />
       </div>
     );
   }
