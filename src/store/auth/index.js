@@ -15,6 +15,7 @@ const initialState = {
   isLoading: false,
   isAuthorized: false,
   errorMessage: null,
+  user: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -37,6 +38,7 @@ export default function reducer(state = initialState, action) {
         isAuthorized: true,
         isLoading: false,
         errorMessage: null,
+        user: action.payload,
       };
 
     case SIGNIN_USERS_FAILURE:
@@ -47,6 +49,7 @@ export default function reducer(state = initialState, action) {
         isAuthorized: false,
         isLoading: false,
         errorMessage: action.payload,
+        user: null,
       };
 
     case SIGNOUT_USERS:
@@ -55,6 +58,7 @@ export default function reducer(state = initialState, action) {
         isAuthorized: false,
         isLoading: false,
         errorMessage: null,
+        user: null,
       };
 
     default:
