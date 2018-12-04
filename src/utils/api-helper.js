@@ -15,7 +15,7 @@ const apiHelper = {
         'Content-Type': 'application/json',
       },
     });
-    return response;
+    return response.data;
   },
   updateProduct: async (id, product) => {
     const config = {
@@ -25,7 +25,7 @@ const apiHelper = {
     };
     const data = JSON.stringify(product);
     const response = await api.put(`/products/${id}`, data, config);
-    return response;
+    return response.data;
   },
   deleteProduct: async id => {
     const response = await api.delete(`/products/${id}`);
@@ -58,7 +58,7 @@ const apiHelper = {
       },
     };
     const response = await api.post('/signIn', JSON.stringify(user), config);
-    return response;
+    return response.data;
   },
   signUp: async user => {
     const config = {
@@ -67,7 +67,7 @@ const apiHelper = {
       },
     };
     const response = await api.post('/signUp', JSON.stringify(user), config);
-    return response;
+    return response.data;
   },
   checkUserSession: async token => {
     const config = {
@@ -76,7 +76,7 @@ const apiHelper = {
       },
     };
     const response = await api.post('/session', JSON.stringify({ token }), config);
-    return response;
+    return response.data;
   },
 };
 
