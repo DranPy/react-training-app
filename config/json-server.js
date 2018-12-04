@@ -7,10 +7,10 @@ const server = jsonServer.create();
 const router = jsonServer.router('json-server/db.json');
 const middlewares = jsonServer.defaults();
 
-const port = 4000;
-const hostname = 'localhost';
+const PORT = 4000;
+const HOST_NAME = 'localhost';
 
-const key = 'Secret key it is';
+const SECRET_KEY = 'Secret key it is';
 
 function init() {
   server.use(middlewares);
@@ -21,9 +21,9 @@ function init() {
   server.use('/session', checkSession);
 
   server.use(authorizationMiddleware);
-
+  // NOTE: how to split requests to DB with permissions and without
   server.use(router);
-  server.listen(port, 'localhost', () => {
+  server.listen(PORT, 'localhost', () => {
     console.log('JSON Server is running');
   });
 }
@@ -36,7 +36,11 @@ function signIn(req, res) {
     return res.status(400).json({ message: 'Invalid data' });
   }
 
-  return res.status(200).json(generateUserToken(user.id));
+  return res.status(200).json({
+    token: generateUserToken(user),
+    id: user.id,
+    email: user.email,
+  });
 }
 
 async function signUp(req, res) {
@@ -52,13 +56,16 @@ async function signUp(req, res) {
     .insert({ email: req.body.email, password: req.body.password })
     .write();
 
-  return res.status(200).json(generateUserToken(user.id));
+  const userInfo = {
+    token: generateUserToken(user),
+    id: user.id,
+    email: user.email,
+  };
+  return res.status(200).json(userInfo);
 }
 
-function generateUserToken(userId) {
-  return {
-    token: jwt.sign({ id: userId }, key),
-  };
+function generateUserToken({ id, email }) {
+  return jwt.sign({ id, email }, SECRET_KEY);
 }
 
 function authorizationMiddleware(req, res, next) {
@@ -72,35 +79,35 @@ function authorizationMiddleware(req, res, next) {
 
 function isAuthorized(authorization) {
   const token = authorization ? authorization.trim().split(' ')[1] : null;
-  const isUserAuthorized = verifyToken(token);
+  const user = verifyToken(token);
 
-  return isUserAuthorized;
+  return user != null;
 }
 
 function verifyToken(token) {
-  let isTokenValid = true;
-  if (!token) {
-    isTokenValid = false;
-  } else {
-    const decodeUser = jwt.verify(token, key);
+  let user = null;
+  if (token) {
     // NOTE: In this place we must check if user exist by decoded id, but it just a training project
-    if (!decodeUser && !decodeUser.id) {
-      isTokenValid = false;
-    }
+    user = jwt.verify(token, SECRET_KEY);
   }
-  return isTokenValid;
+  return user;
 }
 
 function checkSession(req, res) {
   const token = req.body.token;
-  if (verifyToken(token)) {
-    return res.sendStatus(200);
+  const user = verifyToken(token);
+  if (user) {
+    return res.status(200).json({
+      token,
+      id: user.id,
+      email: user.email,
+    });
   }
   return res.status(403).json({ message: 'Token is invalid data' });
 }
 
 module.exports = {
   init: init,
-  port: port,
-  hostname: hostname,
+  port: PORT,
+  hostname: HOST_NAME,
 };
