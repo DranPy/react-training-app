@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 import UserInfo from '../../components/auth/UserInfo';
 import AuthMenu from '../../components/auth/AuthMenu';
-import { getIsAuthorized } from '../../store/auth/selectors';
+import { getIsAuthorized, getUser } from '../../store/auth/selectors';
 import { signOut } from '../../store/auth/actions';
 import { removeUserToken } from '../../helpers/auth/user';
 
 class StatusBarContainer extends Component {
   static propTypes = {
     isAuthorized: PropTypes.bool,
-    user: PropTypes.bool,
+    user: PropTypes.object,
     signOut: PropTypes.func,
   };
 
@@ -23,7 +23,7 @@ class StatusBarContainer extends Component {
 
 const mapStateToProps = state => ({
   isAuthorized: getIsAuthorized(state),
-  user: { email: 'test@gmail.com' },
+  user: getUser(state),
 });
 
 const mapDispatchToProps = dispatch => ({
