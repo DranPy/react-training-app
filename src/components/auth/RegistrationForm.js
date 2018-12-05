@@ -26,8 +26,6 @@ class RegistrationForm extends Component {
     const { history, isAuthorized } = this.props;
     if (isAuthorized) {
       if (history.length > 1) {
-        //   history.goBack();
-        // } else {
         history.push('/');
       }
     }

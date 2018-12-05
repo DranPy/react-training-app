@@ -1,5 +1,4 @@
 import axios from 'axios';
-// NOTE: add a symlink
 // import { host, port } from '/config/json-server';
 
 import { getAuthHeader } from '../helpers/auth/user';
