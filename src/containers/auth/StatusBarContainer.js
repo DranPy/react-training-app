@@ -17,7 +17,11 @@ class StatusBarContainer extends Component {
 
   render() {
     const { isAuthorized, signOut, user } = this.props;
-    return isAuthorized ? <UserInfo user={user} onSignOut={signOut} /> : <AuthMenu />;
+    return (
+      <div className="status-bar">
+        {isAuthorized ? <UserInfo user={user} onSignOut={signOut} /> : <AuthMenu />}
+      </div>
+    );
   }
 }
 

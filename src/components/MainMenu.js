@@ -8,7 +8,7 @@ class MainMenu extends Component {
   render() {
     return (
       <div className="main-menu">
-        <ul className="nav nav--left">
+        <ul className="nav">
           <li>
             <NavLink className="nav-link" to="/products">
               Products

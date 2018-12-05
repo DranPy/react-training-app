@@ -11,7 +11,7 @@ class UserInfo extends Component {
     const { user, onSignOut } = this.props;
 
     return (
-      <div className="row">
+      <div className="row align-items-center">
         <div className="col-7">
           <div>{user.email}</div>
         </div>
