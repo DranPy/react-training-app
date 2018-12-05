@@ -5,7 +5,5 @@ export const FETCH_PRODUCT_REQUEST = 'products/FETCH_ONE/REQUEST';
 export const FETCH_PRODUCT_SUCCESS = 'products/FETCH_ONE/SUCCESS';
 
 export const CREATE_PRODUCT_SUCCESS = 'products/CREATE_ONE/SUCCESS';
-
 export const UPDATE_PRODUCT_SUCCESS = 'products/UPDATE_ONE/SUCCESS';
-
 export const DELETE_PRODUCT_SUCCESS = 'products/DELETE_ONE/SUCCESS';

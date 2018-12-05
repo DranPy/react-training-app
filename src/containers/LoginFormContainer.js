@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { signIn } from '../store/auth/actions';
 import { getErrorMessage, getIsLoading, getIsAuthorized } from '../store/auth/selectors';
 import LoginForm from '../components/auth/LoginForm';
+import withAuthRedirect from '../hocs/withAuthRedirect';
 
 const validate = values => {
   const errors = {};
@@ -30,6 +31,7 @@ const mapStateToProps = state => ({
 });
 
 export default flow(
+  withAuthRedirect(),
   reduxForm({
     form: 'loginForm',
     validate,

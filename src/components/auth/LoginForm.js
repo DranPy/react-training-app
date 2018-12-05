@@ -14,16 +14,6 @@ class LoginForm extends Component {
     isAuthorized: PropTypes.bool,
   };
 
-  // TODO: create page and move redirect to page
-  redirectAuthorizedUser = () => {
-    const { history, isAuthorized } = this.props;
-    if (isAuthorized) {
-      if (history.length > 1) {
-        history.push('/');
-      }
-    }
-  };
-
   errorMessage = () => {
     const { errorMessage } = this.props;
     if (errorMessage) {
@@ -32,7 +22,6 @@ class LoginForm extends Component {
   };
 
   render() {
-    this.redirectAuthorizedUser();
     const { submitting, handleSubmit, valid } = this.props;
 
     return (

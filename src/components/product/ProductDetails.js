@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
@@ -31,11 +31,11 @@ class ProductDetails extends Component {
     const { id, name, categories, authors, description, price, imgUrl } = product;
 
     return (
-      <React.Fragment>
+      <Fragment>
         <div className="product-details">
           <div className="container">
             {!isLoading && product ? (
-              <React.Fragment>
+              <Fragment>
                 <div className="breadcrumbs">
                   <ul className="list-unstyled">
                     <li>
@@ -75,13 +75,13 @@ class ProductDetails extends Component {
                     <p>{description}</p>
                   </div>
                 </div>
-              </React.Fragment>
+              </Fragment>
             ) : (
               <Loader />
             )}
           </div>
         </div>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

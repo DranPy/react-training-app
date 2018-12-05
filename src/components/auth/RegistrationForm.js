@@ -21,18 +21,7 @@ class RegistrationForm extends Component {
     }
   };
 
-  // TODO: create page and move redirect to page
-  redirectAuthorizedUser = () => {
-    const { history, isAuthorized } = this.props;
-    if (isAuthorized) {
-      if (history.length > 1) {
-        history.push('/');
-      }
-    }
-  };
-
   render() {
-    this.redirectAuthorizedUser();
     const { handleSubmit, valid, submitting } = this.props;
 
     return (
