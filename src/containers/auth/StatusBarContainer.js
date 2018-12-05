@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { flow } from 'lodash';
+import { withRouter } from 'react-router-dom';
 
 import UserInfo from '../../components/auth/UserInfo';
 import AuthMenu from '../../components/auth/AuthMenu';
@@ -30,14 +32,20 @@ const mapStateToProps = state => ({
   user: getUser(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  signOut: () => {
-    dispatch(signOut());
-    removeUserToken();
-  },
-});
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    signOut: () => {
+      dispatch(signOut());
+      removeUserToken();
+      props.history.push('/login');
+    },
+  };
+};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default flow(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  withRouter
 )(StatusBarContainer);
