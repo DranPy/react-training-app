@@ -13,15 +13,6 @@ exports[`<App /> 1`] = `
     <main>
       <Switch>
         <Route
-          component={[Function]}
-          exact={true}
-          path="/register"
-        />
-        <Route
-          component={[Function]}
-          path="/login"
-        />
-        <Route
           exact={true}
           path="/products"
           render={[Function]}
@@ -34,6 +25,16 @@ exports[`<App /> 1`] = `
           component={[Function]}
         />
       </Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/register"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/login"
+      />
     </main>
   </div>
 </BrowserRouter>
