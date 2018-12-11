@@ -1,0 +1,5 @@
+export const FETCH_ALL_CATEGORIES_REQUEST = 'categories/FETCH_ALL/REQUEST';
+export const FETCH_ALL_CATEGORIES_SUCCESS = 'categories/FETCH_ALL/SUCCESS';
+
+export const FETCH_CATEGORY_REQUEST = 'categories/FETCH_ONE/REQUEST';
+export const FETCH_CATEGORY_SUCCESS = 'categories/FETCH_ONE/SUCCESS';

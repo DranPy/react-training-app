@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound /> should match snapshot 1`] = `
+<div
+  className="not-found"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="text-center"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="ban"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="3x"
+        spin={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <div>
+        Page not found
+      </div>
+    </h1>
+  </div>
+</div>
+`;

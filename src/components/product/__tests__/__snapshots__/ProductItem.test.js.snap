@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductItem /> should match snapshot 1`] = `
+<li
+  className="col-3"
+>
+  <div
+    className="product-item"
+  >
+    <Link
+      replace={false}
+      to="/products/1"
+    >
+      <img
+        alt="test name 1"
+        className="product-item__img img-fluid rounded"
+        src="src/1.img"
+      />
+    </Link>
+    <div>
+      <h5
+        className="product-item__name"
+      >
+        <Link
+          replace={false}
+          to="/products/1"
+        >
+          test name 1
+        </Link>
+      </h5>
+      <div
+        className="product-item__price"
+      >
+        <strong>
+          1$$
+        </strong>
+      </div>
+    </div>
+    <ProductActions />
+  </div>
+</li>
+`;

@@ -9,6 +9,10 @@ process.on('unhandledRejection', err => {
   throw err;
 });
 
+// Run json-server
+const jsonServer = require('../config/json-server');
+jsonServer.init();
+
 // Ensure environment variables are read.
 require('../config/env');
 
@@ -78,11 +82,7 @@ choosePort(HOST, DEFAULT_PORT)
       if (err) {
         return console.log(err);
       }
-      if (isInteractive) {
-        clearConsole();
-      }
       console.log(chalk.cyan('Starting the development server...\n'));
-      openBrowser(urls.localUrlForBrowser);
     });
 
     ['SIGINT', 'SIGTERM'].forEach(function(sig) {

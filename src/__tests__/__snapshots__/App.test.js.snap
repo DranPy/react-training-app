@@ -11,6 +11,20 @@ exports[`<App /> 1`] = `
       <MainMenu />
     </header>
     <main>
+      <Switch>
+        <Route
+          exact={true}
+          path="/products"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          path="/products/:id"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
       <Route
         component={[Function]}
         exact={true}

@@ -1,0 +1,20 @@
+.main-menu {
+  display: flex
+}
+
+.main-menu .status-bar {
+  margin-left: auto;
+}
+
+.nav .nav-link {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.nav .nav-link:hover {
+  border-bottom-color: #ff000075;
+}
+
+.nav .nav-link.active {
+  border-bottom-color: red;
+}

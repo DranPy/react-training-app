@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "json-server/",
+    "config/"
+  ],
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "delay": "2",
+  "ext": "js, css, json"
+}

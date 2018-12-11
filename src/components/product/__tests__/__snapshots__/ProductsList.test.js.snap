@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductsList /> should not render component 1`] = `
+<div
+  className="products-list"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Products
+      <button
+        className="products-list__btn-add btn btn-success rounded-circle"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon="plus"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      </button>
+    </h1>
+    <ul
+      className="row list-unstyled"
+    >
+      <Loader />
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ProductsList /> should render component 1`] = `
+<div
+  className="products-list"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Products
+      <button
+        className="products-list__btn-add btn btn-success rounded-circle"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon="plus"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      </button>
+    </h1>
+    <ul
+      className="row list-unstyled"
+    >
+      <ProductItem
+        key="1"
+        product={
+          Object {
+            "category": "category 1",
+            "id": "1",
+            "imgUrl": "src/1.jpg",
+            "name": "test1",
+            "price": "1$",
+          }
+        }
+      />
+    </ul>
+  </div>
+</div>
+`;
