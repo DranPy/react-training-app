@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
+import Modal from '../modals/Modal';
 
 class ProductActions extends Component {
   state = {
@@ -10,6 +10,8 @@ class ProductActions extends Component {
   };
 
   static propTypes = {
+    productId: PropTypes.number,
+    productName: PropTypes.string,
     onBuy: PropTypes.func,
     onDelete: PropTypes.func,
   };
@@ -21,7 +23,7 @@ class ProductActions extends Component {
   };
 
   render() {
-    const { id, onBuy, onDelete } = this.props;
+    const { productId, productName, onBuy, onDelete } = this.props;
     const { isConfirmDeleteModal } = this.state;
 
     return (
@@ -33,18 +35,22 @@ class ProductActions extends Component {
           <button onClick={this.toggleModal} className="btn btn-outline-primary" title="Remove">
             <FA icon="times-circle" />
           </button>
-          <Link to={`/products/${id}/edit`} className="btn btn-outline-primary" title="Edit">
+          <Link to={`/products/${productId}/edit`} className="btn btn-outline-primary" title="Edit">
             <FA icon="pen" />
           </Link>
         </div>
-        <Modal isOpen={isConfirmDeleteModal} contentLabel={'Test header'}>
-          <div>Do you want delete this product?</div>
-          <button className="btn btn-default" onClick={() => onDelete(id)}>
-            Ok
-          </button>
-          <button className="btn btn-default" onClick={this.toggleModal}>
-            Close
-          </button>
+        <Modal header="Attention" isOpen={isConfirmDeleteModal} onRequestClose={this.toggleModal}>
+          <div>
+            Do you want delete <strong>{productName}</strong> product?
+          </div>
+          <div className="btn-group">
+            <button className="btn btn-primary" onClick={() => onDelete(productId)}>
+              Ok
+            </button>
+            <button className="btn btn-outline-primary" onClick={this.toggleModal}>
+              Close
+            </button>
+          </div>
         </Modal>
       </Fragment>
     );
