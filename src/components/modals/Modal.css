@@ -1,5 +1,5 @@
 
-.ReactModal__Overlay--default {
+.ReactModal__Overlay-default {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,13 +12,30 @@
 }
 
 .ReactModal__Content {
+  background-color:rgb(255, 255, 255);
+  border: 1px solid #dee2e6;
+
   padding: 20px;
   width: 100%;  
 }
 
-.ReactModal__Content--default {
-  background-color:rgb(255, 255, 255);
-  border: 1px solid #dee2e6;
+.ReactModal__Content--theme-default .ReactModal__Header {
+  background-color: #eee;
+}
+
+.ReactModal__Content--theme-info .ReactModal__Header {
+  background-color: #85b7bf;
+  /* background-color: var(--info); */
+}
+
+.ReactModal__Content--theme-warning .ReactModal__Header  {
+  background-color: #fde291;
+  /* background-color: var(--warning); */
+}
+
+.ReactModal__Content--theme-danger .ReactModal__Header {
+  background-color: #fbc5ca;
+  /* background-color: var(--danger); */
 }
 
 .ReactModal__Content--width-mode-narrow {
@@ -33,9 +50,6 @@
   max-width: 800px;
 }
 
-.ReactModal__Content--default .ReactModal__Header {
-  background-color: #eee;
-}
 
 .ReactModal__Header {
   margin-top: -20px; 

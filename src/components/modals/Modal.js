@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import './Modal.css';
 
@@ -10,7 +10,9 @@ ReactModal.setAppElement('#root');
 class Modal extends Component {
   static Theme = {
     default: 'default',
-    primary: 'primary',
+    warning: 'warning',
+    danger: 'danger',
+    info: 'info',
   };
 
   static WidthMode = {
@@ -33,15 +35,13 @@ class Modal extends Component {
   render() {
     const { children, theme, widthMode, header, onRequestClose, ...props } = this.props;
 
-    const modalClass = classnames({
-      [`ReactModal__Content--${theme}`]: theme,
-      [`ReactModal__Content--width-mode-${widthMode}`]: widthMode,
-    });
-
     return (
       <ReactModal
-        className={modalClass}
-        overlayClassName={`ReactModal__Overlay--${theme}`}
+        className={cn({
+          [`ReactModal__Content--theme-${theme}`]: theme,
+          [`ReactModal__Content--width-mode-${widthMode}`]: widthMode,
+        })}
+        overlayClassName="ReactModal__Overlay-default"
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
         onRequestClose={onRequestClose}

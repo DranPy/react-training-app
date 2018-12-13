@@ -39,7 +39,12 @@ class ProductActions extends Component {
             <FA icon="pen" />
           </Link>
         </div>
-        <Modal header="Attention" isOpen={isConfirmDeleteModal} onRequestClose={this.toggleModal}>
+        <Modal
+          header="Attention"
+          theme={Modal.Theme.danger}
+          isOpen={isConfirmDeleteModal}
+          onRequestClose={this.toggleModal}
+        >
           <div>
             Do you want delete <strong>{productName}</strong> product?
           </div>
