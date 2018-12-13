@@ -19,25 +19,6 @@
   width: 100%;  
 }
 
-.ReactModal__Content--theme-default .ReactModal__Header {
-  background-color: #eee;
-}
-
-.ReactModal__Content--theme-info .ReactModal__Header {
-  background-color: #85b7bf;
-  /* background-color: var(--info); */
-}
-
-.ReactModal__Content--theme-warning .ReactModal__Header  {
-  background-color: #fde291;
-  /* background-color: var(--warning); */
-}
-
-.ReactModal__Content--theme-danger .ReactModal__Header {
-  background-color: #fbc5ca;
-  /* background-color: var(--danger); */
-}
-
 .ReactModal__Content--width-mode-narrow {
   max-width: 350px;
 }
@@ -51,10 +32,3 @@
 }
 
 
-.ReactModal__Header {
-  margin-top: -20px; 
-  margin-left: -20px;
-  margin-right: -20px;
-  padding: 9px 20px;
-  margin-bottom: 15px;
-}

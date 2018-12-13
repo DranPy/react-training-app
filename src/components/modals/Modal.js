@@ -3,6 +3,8 @@ import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import ModalHeader from './ModalHeader';
+
 import './Modal.css';
 
 ReactModal.setAppElement('#root');
@@ -33,7 +35,7 @@ class Modal extends Component {
   };
 
   render() {
-    const { children, theme, widthMode, header, onRequestClose, ...props } = this.props;
+    const { children, theme, widthMode, header, onRequestClose, ...rest } = this.props;
 
     return (
       <ReactModal
@@ -45,16 +47,9 @@ class Modal extends Component {
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
         onRequestClose={onRequestClose}
-        {...props}
+        {...rest}
       >
-        {header && (
-          <div className="ReactModal__Header">
-            {header}
-            <button className="close" onClick={onRequestClose}>
-              &times;
-            </button>
-          </div>
-        )}
+        {header && <ModalHeader onRequestClose={onRequestClose}>{header}</ModalHeader>}
         {this.props.children}
       </ReactModal>
     );
