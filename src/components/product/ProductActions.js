@@ -2,7 +2,9 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+
 import Modal from '../modals/Modal';
+import ModalFooter from '../modals/ModalFooter';
 
 class ProductActions extends Component {
   state = {
@@ -48,14 +50,16 @@ class ProductActions extends Component {
           <div>
             Do you want delete <strong>{productName}</strong> product?
           </div>
-          <div className="btn-group">
-            <button className="btn btn-primary" onClick={() => onDelete(productId)}>
-              Ok
-            </button>
-            <button className="btn btn-outline-primary" onClick={this.toggleModal}>
-              Close
-            </button>
-          </div>
+          <ModalFooter>
+            <div className="btn-group">
+              <button className="btn btn-primary" onClick={() => onDelete(productId)}>
+                Ok
+              </button>
+              <button className="btn btn-outline-primary" onClick={this.toggleModal}>
+                Close
+              </button>
+            </div>
+          </ModalFooter>
         </Modal>
       </Fragment>
     );
