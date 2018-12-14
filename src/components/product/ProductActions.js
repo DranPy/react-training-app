@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-import Modal from '../modals/Modal';
-import ModalFooter from '../modals/ModalFooter';
+import { Modal, ModalFooter } from '../modals';
 
 class ProductActions extends Component {
   state = {
