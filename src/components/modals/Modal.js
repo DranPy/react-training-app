@@ -23,6 +23,12 @@ class Modal extends Component {
     narrow: 'narrow',
   };
 
+  static HeightMode = {
+    top: 'top',
+    center: 'center',
+    fullFill: 'full-fill',
+  };
+
   static propTypes = {
     theme: PropTypes.string,
     widthMode: PropTypes.string,
@@ -32,10 +38,11 @@ class Modal extends Component {
   static defaultProps = {
     theme: Modal.Theme.default,
     widthMode: Modal.WidthMode.default,
+    heightMode: Modal.HeightMode.center,
   };
 
   render() {
-    const { children, theme, widthMode, header, onRequestClose, ...rest } = this.props;
+    const { children, theme, widthMode, heightMode, header, onRequestClose, ...rest } = this.props;
 
     return (
       <ReactModal
@@ -43,7 +50,9 @@ class Modal extends Component {
           [`ReactModal__Content--theme-${theme}`]: theme,
           [`ReactModal__Content--width-mode-${widthMode}`]: widthMode,
         })}
-        overlayClassName="ReactModal__Overlay-default"
+        overlayClassName={cn('ReactModal__Overlay-default', {
+          [`ReactModal__Overlay--height-mode-${heightMode}`]: heightMode,
+        })}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
         onRequestClose={onRequestClose}
