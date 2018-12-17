@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-import { Modal, ModalFooter } from '../modals';
+import { Modal, ModalFooter, ModalBody } from '../modals';
 
 class ProductActions extends Component {
   state = {
@@ -29,7 +29,7 @@ class ProductActions extends Component {
 
     return (
       <Fragment>
-        <div className={`btn-group ${this.props.className}`}>
+        <div className={`btn-group`}>
           <button onClick={onBuy} className="btn btn-primary" title="Buy">
             <FA icon="shopping-cart" />
           </button>
@@ -46,9 +46,9 @@ class ProductActions extends Component {
           isOpen={isConfirmDeleteModal}
           onRequestClose={this.toggleModal}
         >
-          <div>
+          <ModalBody>
             Do you want delete <strong>{productName}</strong> product?
-          </div>
+          </ModalBody>
           <ModalFooter>
             <div className="btn-group">
               <button className="btn btn-primary" onClick={() => onDelete(productId)}>
