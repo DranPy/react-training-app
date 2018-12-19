@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Modal, ModalFooter, ModalHeader } from './index';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from './index';
 
 const ModalAlert = ({ children, header, onAccept, onRequestClose, ...rest }) => {
   return (
     <Modal onRequestClose={onRequestClose} theme={Modal.Theme.info} {...rest}>
       <ModalHeader onRequestClose={onRequestClose}>{header}</ModalHeader>
-      {children}
+      <ModalBody>{children}</ModalBody>
       <ModalFooter>
         <button className="btn btn-primary" onClick={onAccept || onRequestClose}>
           Ok

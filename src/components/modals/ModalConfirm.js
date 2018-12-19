@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Modal, ModalFooter, ModalHeader } from './index';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from './index';
 
 const ModalConfirm = ({ children, header, onAccept, onReject, onRequestClose, ...rest }) => {
   return (
     <Modal onRequestClose={onRequestClose} theme={Modal.Theme.danger} {...rest}>
       <ModalHeader onRequestClose={onRequestClose}>{header}</ModalHeader>
-      {children}
+      <ModalBody>{children}</ModalBody>
       <ModalFooter>
         <div className="btn-group">
           <button className="btn btn-primary" onClick={onAccept || onRequestClose}>
