@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import MainMenu from './components/MainMenu';
@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
+          <header className="App__header">
             <MainMenu />
           </header>
           <main>
