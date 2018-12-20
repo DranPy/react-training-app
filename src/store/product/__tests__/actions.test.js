@@ -13,9 +13,9 @@ import {
   fetchProductSuccess,
   fetchProduct,
 } from '../actions';
-import api from '../../../utils/api-helper';
+import api from 'utils/api-helper';
 
-jest.mock('../../../utils/api-helper');
+jest.mock('utils/api-helper');
 
 describe('product/actions', () => {
   it('fetchManyProductsRequest', () => {

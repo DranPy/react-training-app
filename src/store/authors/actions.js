@@ -4,7 +4,7 @@ import {
   FETCH_AUTHOR_REQUEST,
   FETCH_AUTHOR_SUCCESS,
 } from './actionsType';
-import api from '../../utils/api-helper';
+import api from 'utils/api-helper';
 
 export const fetchAllAuthorsRequest = () => ({
   type: FETCH_ALL_AUTHORS_REQUEST,

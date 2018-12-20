@@ -10,8 +10,8 @@ import {
   CHECK_SESSION_USERS_SUCCESS,
   CHECK_SESSION_USERS_FAILURE,
 } from './actionsType';
-import api from '../../utils/api-helper';
-import { setUserToken } from '../../helpers/auth/user';
+import api from 'utils/api-helper';
+import { setUserToken } from 'helpers/auth/user';
 
 export const signInRequest = () => ({
   type: SIGNIN_USERS_REQUEST,

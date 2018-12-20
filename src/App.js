@@ -6,19 +6,19 @@ import { connect } from 'react-redux';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import MainMenu from './components/MainMenu';
-import RegistrationContainer from './containers/RegistrationFormContainer';
-import LoginContainer from './containers/LoginFormContainer';
-import ProductsListContainer from './containers/product/ProductsListContainer';
-import ProductDetailsContainer from './containers/product/ProductDetailsContainer';
-import ProductAddPage from './pages/ProductAddPage';
-import ProductEditPage from './pages/ProductEditPage';
-import NotFound from './components/NotFound';
+import MainMenu from 'components/MainMenu';
+import RegistrationContainer from 'containers/RegistrationFormContainer';
+import LoginContainer from 'containers/LoginFormContainer';
+import ProductsListContainer from 'containers/product/ProductsListContainer';
+import ProductDetailsContainer from 'containers/product/ProductDetailsContainer';
+import ProductAddPage from 'pages/ProductAddPage';
+import ProductEditPage from 'pages/ProductEditPage';
+import NotFound from 'components/NotFound';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { getUserToken } from './helpers/auth/user';
-import { checkUserSession } from './store/auth/actions';
+import { getUserToken } from 'helpers/auth/user';
+import { checkUserSession } from 'store/auth/actions';
 
 library.add(fas);
 

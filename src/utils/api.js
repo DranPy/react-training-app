@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import { host, port } from '/config/json-server';
 
-import { getAuthHeader } from '../helpers/auth/user';
+import { getAuthHeader } from 'helpers/auth/user';
 
 //const baseURL = `http://${host}:${port}`;
 const baseURL = `http://localhost:4000`;

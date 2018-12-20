@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 
 import DataSourceProducts from '../DataSourceProducts';
 
-import api from '../../../utils/api-helper';
+import api from 'utils/api-helper';
 
-jest.mock('../../../utils/api-helper');
+jest.mock('utils/api-helper');
 
 describe('<DataSourceProducts />', () => {
   let WrapperComponent;

@@ -7,7 +7,7 @@ import {
   UPDATE_PRODUCT_SUCCESS,
   DELETE_PRODUCT_SUCCESS,
 } from './actionsType';
-import api from '../../utils/api-helper';
+import api from 'utils/api-helper';
 
 export const fetchManyProductsRequest = () => ({
   type: FETCH_MANY_PRODUCTS_REQUEST,

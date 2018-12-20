@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './MainMenu.css';
-import StatusBarContainer from '../containers/auth/StatusBarContainer';
+import StatusBarContainer from 'containers/auth/StatusBarContainer';
 
 class MainMenu extends Component {
   render() {

@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { flow } from 'lodash';
 import { withRouter } from 'react-router-dom';
 
-import UserInfo from '../../components/auth/UserInfo';
-import AuthMenu from '../../components/auth/AuthMenu';
-import { getIsAuthorized, getUser } from '../../store/auth/selectors';
-import { signOut } from '../../store/auth/actions';
-import { removeUserToken } from '../../helpers/auth/user';
+import UserInfo from 'components/auth/UserInfo';
+import AuthMenu from 'components/auth/AuthMenu';
+import { getIsAuthorized, getUser } from 'store/auth/selectors';
+import { signOut } from 'store/auth/actions';
+import { removeUserToken } from 'helpers/auth/user';
 
 class StatusBarContainer extends Component {
   static propTypes = {

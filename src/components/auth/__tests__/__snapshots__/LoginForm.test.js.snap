@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> should match snapshot 1`] = `
+<div
+  className="container"
+  style={
+    Object {
+      "width": 400,
+    }
+  }
+>
+  <form>
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Email"
+      name="email"
+      type="email"
+    />
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Password"
+      name="password"
+      type="password"
+    />
+    <div>
+      <input
+        className="btn btn-block btn-primary"
+        disabled={true}
+        type="submit"
+        value="Login"
+      />
+    </div>
+  </form>
+</div>
+`;

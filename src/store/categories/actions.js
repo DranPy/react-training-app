@@ -4,7 +4,7 @@ import {
   FETCH_CATEGORY_REQUEST,
   FETCH_CATEGORY_SUCCESS,
 } from './actionsType';
-import api from '../../utils/api-helper';
+import api from 'utils/api-helper';
 
 export const fetchAllCategoriesRequest = () => ({
   type: FETCH_ALL_CATEGORIES_REQUEST,
