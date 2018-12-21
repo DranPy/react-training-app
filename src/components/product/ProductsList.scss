@@ -1,0 +1,27 @@
+.products-list {
+  ul { 
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header { 
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-add {
+    margin-left: auto;
+  }
+}
+
+.product-item {
+  margin-bottom: 10px;
+
+  &__name {
+    margin-top: 10px;
+  }
+
+  &__price {
+    margin-bottom: 10px;
+  }
+}
