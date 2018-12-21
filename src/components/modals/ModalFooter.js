@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ModalFooter.css';
+import './ModalFooter.scss';
 
 const ModalFooter = ({ children, ...rest }) => {
   return (

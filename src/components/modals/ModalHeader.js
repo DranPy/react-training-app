@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './ModalHeader.css';
+import './ModalHeader.scss';
 
 const ModalHeader = ({ children, onRequestClose, ...rest }) => {
   return (

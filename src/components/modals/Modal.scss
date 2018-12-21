@@ -1,0 +1,59 @@
+
+.ReactModal {
+  $root: &;
+
+  &__Overlay-default {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.459);
+    display: flex;
+  
+    justify-content: center;
+  }
+
+  &__Overlay {
+    &--height-mode-top {
+      padding-top: 40px;
+      align-items: flex-start;
+    }
+
+    &--height-mode-center {
+      align-items: center;
+    }
+
+    &--height-mode-full-fill {
+      align-items: center;
+
+      .ReactModal__Content {
+        height: 100vh;
+      }
+
+      .ReactModal__Body {
+        height: calc(100vh - 110px);
+      }
+    }
+  }
+
+  &__Content {
+    background-color:rgb(255, 255, 255);
+    border: 1px solid #dee2e6;
+
+    padding: 20px;
+    width: 100%;
+
+    &--width-mode-default {
+      max-width: 500px;
+    }
+
+    &--width-mode-narrow {
+      max-width: 350px;
+    }
+
+    &--width-mode-wide {
+      max-width: 800px;
+    }
+  }
+}

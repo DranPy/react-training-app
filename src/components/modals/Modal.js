@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import ModalHeader from './ModalHeader';
 
-import './Modal.css';
+import './Modal.scss';
 
 ReactModal.setAppElement('#root');
 

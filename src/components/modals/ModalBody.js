@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ModalBody.css';
+import './ModalBody.scss';
 
 const ModalBody = ({ children, ...rest }) => {
   return (
