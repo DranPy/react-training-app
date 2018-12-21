@@ -23,8 +23,13 @@ class ProductActions extends Component {
     }));
   };
 
+  handleDelete = () => {
+    const { productId, onDelete } = this.props;
+    onDelete(productId);
+  };
+
   render() {
-    const { productId, productName, onBuy, onDelete } = this.props;
+    const { productId, productName, onBuy } = this.props;
     const { isConfirmDeleteModal } = this.state;
 
     return (
@@ -51,7 +56,7 @@ class ProductActions extends Component {
           </ModalBody>
           <ModalFooter>
             <div className="btn-group">
-              <button className="btn btn-primary" onClick={() => onDelete(productId)}>
+              <button className="btn btn-primary" onClick={this.handleDelete}>
                 Ok
               </button>
               <button className="btn btn-outline-primary" onClick={this.toggleModal}>
