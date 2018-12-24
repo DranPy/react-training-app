@@ -32,6 +32,7 @@ class Modal extends Component {
   static propTypes = {
     theme: PropTypes.string,
     widthMode: PropTypes.string,
+    heightMode: PropTypes.string,
     header: PropTypes.string,
   };
 
