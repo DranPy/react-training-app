@@ -6,7 +6,7 @@ import Loader from '../Loader';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-import './ProductsList.css';
+import './ProductsList.scss';
 
 class ProductsList extends Component {
   static propTypes = {
@@ -26,15 +26,15 @@ class ProductsList extends Component {
     return (
       <div className="products-list">
         <div className="container">
-          <h1>
-            Products
+          <header>
+            <h1>Products</h1>
             <Link
               to="/products/add"
               className="products-list__btn-add btn btn-success rounded-circle"
             >
               <FA icon="plus" />
             </Link>
-          </h1>
+          </header>
           <ul className="row list-unstyled">
             {!isLoading && products ? (
               products.map(product => (

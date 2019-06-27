@@ -6,7 +6,7 @@ import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import Loader from '../Loader';
 import ProductActions from './ProductActions';
 
-import './ProductDetails.css';
+import './ProductDetails.scss';
 
 class ProductDetails extends Component {
   static propTypes = {
