@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import api from '../../utils/api-helper';
+import api from 'utils/api-helper';
 
 class DataSourceProducts extends Component {
   static defaultProps = {

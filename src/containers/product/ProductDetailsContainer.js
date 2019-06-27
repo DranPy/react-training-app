@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { fetchProduct } from '../../store/product/actions';
-import { getProduct, getIsLoading } from '../../store/product/selectors';
+import { fetchProduct } from 'store/product/actions';
+import { getProduct, getIsLoading } from 'store/product/selectors';
 
-import ProductDetails from '../../components/product/ProductDetails';
+import ProductDetails from 'components/product/ProductDetails';
 
 const mapStateToProps = (state, props) => ({
   isLoading: getIsLoading(state),

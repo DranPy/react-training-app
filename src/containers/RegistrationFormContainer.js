@@ -2,10 +2,10 @@ import { reduxForm } from 'redux-form';
 import { flow } from 'lodash';
 import { connect } from 'react-redux';
 
-import { signUp } from '../store/auth/actions';
-import { getErrorMessage, getIsLoading, getIsAuthorized } from '../store/auth/selectors';
-import RegistrationForm from '../components/auth/RegistrationForm';
-import withAuthRedirect from '../hocs/withAuthRedirect';
+import { signUp } from 'store/auth/actions';
+import { getErrorMessage, getIsLoading, getIsAuthorized } from 'store/auth/selectors';
+import RegistrationForm from 'components/auth/RegistrationForm';
+import withAuthRedirect from 'hocs/withAuthRedirect';
 
 const validate = ({ email, password, confirmPassword }) => {
   const rePassword = /^(?=.*\d).{4,8}$/i;

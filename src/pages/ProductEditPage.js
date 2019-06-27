@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { isEmpty } from 'lodash';
-import ProductFormContainer from '../containers/product/ProductFormContainer';
-import { fetchProduct, updateProduct } from '../store/product/actions';
-import { getProductForForm } from '../store/product/selectors';
-import { FormMode } from '../utils/enums';
-import normalize from '../utils/normalize';
+
+import ProductFormContainer from 'containers/product/ProductFormContainer';
+import { fetchProduct, updateProduct } from 'store/product/actions';
+import { getProductForForm } from 'store/product/selectors';
+import { FormMode } from 'utils/enums';
+import normalize from 'utils/normalize';
 
 class ProductEditPage extends Component {
   componentDidMount() {

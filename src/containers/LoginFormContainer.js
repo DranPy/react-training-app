@@ -2,10 +2,10 @@ import { reduxForm } from 'redux-form';
 import { flow } from 'lodash';
 import { connect } from 'react-redux';
 
-import { signIn } from '../store/auth/actions';
-import { getErrorMessage, getIsLoading, getIsAuthorized } from '../store/auth/selectors';
-import LoginForm from '../components/auth/LoginForm';
-import withAuthRedirect from '../hocs/withAuthRedirect';
+import { signIn } from 'store/auth/actions';
+import { getErrorMessage, getIsLoading, getIsAuthorized } from 'store/auth/selectors';
+import LoginForm from 'components/auth/LoginForm';
+import withAuthRedirect from 'hocs/withAuthRedirect';
 
 const validate = values => {
   const errors = {};

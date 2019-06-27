@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import api from '../utils/api-helper';
+import api from 'utils/api-helper';
 
 const withProducts = options => WrappedComponent => {
   return class extends Component {

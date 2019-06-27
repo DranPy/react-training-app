@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import ProductFormContainer from '../containers/product/ProductFormContainer';
-import { createProduct } from '../store/product/actions';
 import { connect } from 'react-redux';
 import { reset } from 'redux-form';
-import { FormMode } from '../utils/enums';
-import normalize from '../utils/normalize';
+
+import ProductFormContainer from 'containers/product/ProductFormContainer';
+import { createProduct } from 'store/product/actions';
+import { FormMode } from 'utils/enums';
+import normalize from 'utils/normalize';
 
 class ProductAddPage extends Component {
   handleSubmit = values => {

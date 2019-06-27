@@ -2,9 +2,9 @@ import { shallow, mount } from 'enzyme';
 import React, { Component } from 'react';
 
 import withProducts from '../withProducts';
-import api from '../../utils/api-helper';
+import api from 'utils/api-helper';
 
-jest.mock('../../utils/api-helper');
+jest.mock('utils/api-helper');
 
 describe('HOC withProducts', () => {
   let WrapperComponent;

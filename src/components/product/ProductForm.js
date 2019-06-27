@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form';
 import Select from 'react-select';
-import { FormMode } from '../../utils/enums';
+import { FormMode } from 'utils/enums';
 
 class ProductForm extends Component {
   static propTypes = {
