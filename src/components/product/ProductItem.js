@@ -29,7 +29,7 @@ class ProductItem extends Component {
               <strong>{price + currency}</strong>
             </div>
           </div>
-          <ProductActions id={id} onDelete={onDelete} />
+          <ProductActions productId={id} productName={name} onDelete={onDelete} />
         </div>
       </li>
     );

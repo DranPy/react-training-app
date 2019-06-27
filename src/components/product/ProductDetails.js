@@ -12,7 +12,7 @@ class ProductDetails extends Component {
   static propTypes = {
     isLoading: PropTypes.bool,
     product: PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       category: PropTypes.string,
       price: PropTypes.string,
@@ -67,7 +67,7 @@ class ProductDetails extends Component {
                       </div>
                       <div className="col-sm-4 ml-auto">
                         <input className="form-control" type="number" defaultValue={1} />
-                        <ProductActions id={id} />
+                        <ProductActions productId={id} />
                       </div>
                     </div>
 

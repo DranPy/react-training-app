@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
+
+import { Modal, ModalFooter, ModalBody } from '../modals';
 
 class ProductActions extends Component {
   state = {
@@ -10,6 +11,8 @@ class ProductActions extends Component {
   };
 
   static propTypes = {
+    productId: PropTypes.number,
+    productName: PropTypes.string,
     onBuy: PropTypes.func,
     onDelete: PropTypes.func,
   };
@@ -20,31 +23,47 @@ class ProductActions extends Component {
     }));
   };
 
+  handleDelete = () => {
+    const { productId, onDelete } = this.props;
+    onDelete(productId);
+  };
+
   render() {
-    const { id, onBuy, onDelete } = this.props;
+    const { productId, productName, onBuy } = this.props;
     const { isConfirmDeleteModal } = this.state;
 
     return (
       <Fragment>
-        <div className={`btn-group ${this.props.className}`}>
+        <div className={`btn-group`}>
           <button onClick={onBuy} className="btn btn-primary" title="Buy">
             <FA icon="shopping-cart" />
           </button>
           <button onClick={this.toggleModal} className="btn btn-outline-primary" title="Remove">
             <FA icon="times-circle" />
           </button>
-          <Link to={`/products/${id}/edit`} className="btn btn-outline-primary" title="Edit">
+          <Link to={`/products/${productId}/edit`} className="btn btn-outline-primary" title="Edit">
             <FA icon="pen" />
           </Link>
         </div>
-        <Modal isOpen={isConfirmDeleteModal} contentLabel={'Test header'}>
-          <div>Do you want delete this product?</div>
-          <button className="btn btn-default" onClick={() => onDelete(id)}>
-            Ok
-          </button>
-          <button className="btn btn-default" onClick={this.toggleModal}>
-            Close
-          </button>
+        <Modal
+          header="Attention"
+          theme={Modal.Theme.danger}
+          isOpen={isConfirmDeleteModal}
+          onRequestClose={this.toggleModal}
+        >
+          <ModalBody>
+            Do you want delete <strong>{productName}</strong> product?
+          </ModalBody>
+          <ModalFooter>
+            <div className="btn-group">
+              <button className="btn btn-primary" onClick={this.handleDelete}>
+                Ok
+              </button>
+              <button className="btn btn-outline-primary" onClick={this.toggleModal}>
+                Close
+              </button>
+            </div>
+          </ModalFooter>
         </Modal>
       </Fragment>
     );
